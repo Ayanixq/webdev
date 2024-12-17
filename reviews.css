@@ -1,0 +1,145 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f3e5d8;
+    color: #3e2723;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #6d4c41;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffccbc;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffccbc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff8a65;
+}
+
+/* Секция отзывов */
+.reviews {
+    margin-top: 80px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6d4c41;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.review {
+    background-color: #ffccbc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.05);
+}
+
+.review h3 {
+    color: #3e2723;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 1rem;
+}
+
+/* Форма добавления отзыва */
+.add-review {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.add-review form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-review input,
+.add-review textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #ffccbc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.add-review button {
+    background-color: #6d4c41;
+    color: #ffccbc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-review button:hover {
+    background-color: #3e2723;
+}
+
+/* Подвал сайта */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6d4c41;
+    color: #ffccbc;
+    margin-top: 20px;
+}

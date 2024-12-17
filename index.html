@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Coffiend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Coffiend</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <h1>Добро пожаловать в Coffiend</h1>
+        <p>Попробуйте лучший кофе в городе, приготовленный с любовью.</p>
+        <a href="menu.html" class="button">Посмотреть меню</a>
+    </section>
+    <!-- Новинки -->
+<section class="new-arrivals">
+    <h2>Наши новинки</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="./ноовыйкофе.jpg" alt="Новый кофе">
+            <h3>Капучино с лавандой</h3>
+            <p>Нежный вкус и утончённый аромат лаванды — попробуйте наш новый авторский напиток!</p>
+            <a href="menu.html" class="button">Подробнее</a>
+        </div>
+        <div class="card">
+            <img src="./новыйдесерт.jpg" alt="Новый десерт">
+            <h3>Медовый круассан</h3>
+            <p>Свежий и хрустящий круассан с натуральным мёдом.</p>
+            <a href="menu.html" class="button">Подробнее</a>
+        </div>
+        <div class="card">
+            <img src="./новыйчай.jpg" alt="Новый чай">
+            <h3>Чай матча</h3>
+            <p>Популярный японский чай с тонким вкусом и пользой для здоровья.</p>
+            <a href="menu.html" class="button">Подробнее</a>
+        </div>
+    </div>
+</section>
+
+<!-- Популярные блюда -->
+<section class="popular">
+    <h2>Популярные блюда</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="./новый латте.jpg" alt="Латте">
+            <h3>Ванильный латте</h3>
+            <p>Классический латте с добавлением натуральной ванили.</p>
+        </div>
+        <div class="card">
+            <img src="./ньюйорк.jpg" alt="Чизкейк">
+            <h3>Чизкейк Нью-Йорк</h3>
+            <p>Нежный чизкейк с хрустящей основой.</p>
+        </div>
+        <div class="card">
+            <img src="./шоколадный.jpg" alt="Мокко">
+            <h3>Шоколадный мокко</h3>
+            <p>Сочетание кофе, шоколада и сливок.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Преимущества -->
+<section class="advantages">
+    <h2>Почему выбирают нас</h2>
+    <div class="advantage-container">
+        <div class="advantage">
+            <img src="./качество.jpg" alt="Качество">
+            <h3>Высокое качество</h3>
+            <p>Мы используем только свежие кофейные зерна премиум-класса.</p>
+        </div>
+        <div class="advantage">
+            <img src="./выпечка.jpg" alt="Выпечка">
+            <h3>Свежая выпечка</h3>
+            <p>Каждый день мы готовим для вас свежие круассаны и десерты.</p>
+        </div>
+        <div class="advantage">
+            <img src="./уютная.jpg" alt="Уют">
+            <h3>Уютная атмосфера</h3>
+            <p>Идеальное место для работы, встреч и отдыха.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Отзывы -->
+<section class="testimonials">
+    <h2>Отзывы наших клиентов</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <p>"Обожаю это место! Лучший кофе в городе и невероятно вкусные десерты."</p>
+            <h4>- Екатерина П.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Очень уютная атмосфера, сюда приятно приходить как одному, так и с друзьями."</p>
+            <h4>- Андрей С.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Капучино просто волшебный, а персонал всегда дружелюбный!"</p>
+            <h4>- Марина К.</h4>
+        </div>
+    </div>
+</section>
+
+    <!-- Подпишитесь на рассылку -->
+    <section class="newsletter">
+        <h2>Подпишитесь на нашу рассылку</h2>
+        <p>Будьте в курсе всех акций и новостей.</p>
+        <form id="newsletter-form">
+            <input type="email" name="email" id="email" placeholder="Ваш email" required>
+            <button type="submit">Подписаться</button>
+        </form>
+        <div id="message" style="color: green; display: none;">Спасибо за подписку!</div>
+        <div id="error-message" style="color: red; display: none;">Пожалуйста, введите корректный email.</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Coffiend. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Обработка формы подписки
+        document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Предотвращаем отправку формы на сервер
+
+            var emailInput = document.getElementById("email");
+            var email = emailInput.value;
+
+            // Простая проверка email
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (emailPattern.test(email)) {
+                // Если email корректный, выводим сообщение о подписке
+                document.getElementById("message").style.display = "block";
+                document.getElementById("error-message").style.display = "none";
+
+                // Очистить поле ввода
+                emailInput.value = '';
+            } else {
+                // Если email некорректный, выводим сообщение об ошибке
+                document.getElementById("error-message").style.display = "block";
+                document.getElementById("message").style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

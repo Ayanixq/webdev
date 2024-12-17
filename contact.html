@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Coffiend</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Coffiend</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <p><strong>Адрес:</strong> ул. Малдыбаева, д. 22, Бишкек, Кыргызстан</p>
+            <p><strong>Телефон:</strong> +996 (700) 123-456</p>
+            <p><strong>Email:</strong> info@coffiend.kg</p>
+        </div>
+
+        <div class="working-hours">
+            <h3>Режим работы</h3>
+            <ul>
+                <li><strong>Понедельник - Пятница:</strong> 08:00 - 22:00</li>
+                <li><strong>Суббота - Воскресенье:</strong> 09:00 - 23:00</li>
+            </ul>
+        </div>
+
+        <div class="offers">
+            <h3>Наши акции</h3>
+            <p>🎉 <strong>Счастливые часы:</strong> С 10:00 до 12:00 скидка 20% на все кофейные напитки.</p>
+            <p>🎂 <strong>День рождения:</strong> Бесплатный напиток при предъявлении документа.</p>
+            <p>☕ <strong>Карта постоянного гостя:</strong> Каждая 10-я чашка кофе — в подарок!</p>
+        </div>
+
+        <h3>Найдите нас на карте</h3>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.076214523374!2d74.6114517759407!3d42.846017171097266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec8325c634e7d%3A0xc5a7e7fba73c5892!2z0YPQuy4g0JzQkNCa0JbQndCh0KcsIDIyLCDQkdC10LvQsNC90LjQutCwLCDQodCw0LPQvtGA0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2skg!4v1717520105623!5m2!1sru!2skg"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <h3>Напишите нам</h3>
+        <form id="contact-form" method="post">
+            <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" id="email" placeholder="Ваш email" required>
+            <textarea name="message" id="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <!-- Сообщения об успешной отправке и ошибке -->
+        <div id="form-message" style="color: green; display: none;">Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.</div>
+        <div id="form-error" style="color: red; display: none;">Пожалуйста, заполните все поля корректно.</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Coffiend. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Обработка формы "Напишите нам"
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Предотвращаем отправку формы на сервер
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Проверка корректности email
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (name && emailPattern.test(email) && message) {
+                // Если все поля корректны
+                document.getElementById("form-message").style.display = "block";
+                document.getElementById("form-error").style.display = "none";
+                
+                // Очистить поля ввода
+                document.getElementById("name").value = '';
+                document.getElementById("email").value = '';
+                document.getElementById("message").value = '';
+            } else {
+                // Если есть ошибки
+                document.getElementById("form-error").style.display = "block";
+                document.getElementById("form-message").style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
+
+

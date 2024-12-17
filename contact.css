@@ -1,0 +1,169 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Навигация */
+header {
+    background-color: #6f4e37;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e6d2ba;
+}
+
+/* Контакты */
+.contact {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2, .contact h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #6f4e37;
+    font-size: 1.6rem;
+}
+
+.contact-info p, .working-hours ul, .offers p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact-info p strong, .working-hours li strong {
+    color: #6f4e37;
+}
+
+.working-hours ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.offers p {
+    background-color: #f3e8d8;
+    border-left: 4px solid #6f4e37;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Карта */
+.map {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Форма */
+form {
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+form button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #543829;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #6f4e37;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .contact {
+        padding: 15px;
+    }
+}

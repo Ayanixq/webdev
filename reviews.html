@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Coffiend</title>
+    <link rel="stylesheet" href="./reviews.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Coffiend</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="reviews">
+        <h2>Отзывы наших гостей</h2>
+        <div class="reviews-container">
+            <div class="review">
+                <h3>Камила</h3>
+                <p>"Кофейня Coffiend — это мое любимое место в городе! Здесь всегда вкусный кофе и очень уютно. Бариста знают свое дело, а выпечка просто потрясающая!"</p>
+            </div>
+            <div class="review">
+                <h3>Адеми</h3>
+                <p>"Идеальное место для утреннего кофе. Особенно нравится капучино и свежие круассаны. Обязательно буду возвращаться."</p>
+            </div>
+        </div>
+
+        <div class="add-review">
+            <h3>Поделитесь своим отзывом</h3>
+            <form id="review-form">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <textarea id="review" placeholder="Ваш отзыв" rows="4" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Coffiend. Все права защищены.</p>
+    </footer>
+
+    <!-- JavaScript-код -->
+    <script>
+        document.getElementById('review-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Останавливаем отправку формы на сервер
+            const name = document.getElementById('name').value;
+            const review = document.getElementById('review').value;
+
+            // Добавляем новый отзыв в блок "reviews-container"
+            const reviewsContainer = document.querySelector('.reviews-container');
+            const newReview = `
+                <div class="review">
+                    <h3>${name}</h3>
+                    <p>"${review}"</p>
+                </div>
+            `;
+            reviewsContainer.innerHTML += newReview;
+
+            // Очищаем форму после добавления
+            document.getElementById('review-form').reset();
+        });
+    </script>
+</body>
+</html>
+

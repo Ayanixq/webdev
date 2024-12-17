@@ -1,0 +1,156 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f3e5d8;
+    color: #3e2723;
+}
+
+header {
+    background-color: #6d4c41;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffccbc;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffccbc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff8a65;
+}
+
+/* Секция О нас */
+.about {
+    background: url('./фооооон.jpg') center/cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 50px;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Секция Основатели */
+.founders {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.founders-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.founder {
+    background: #ffccbc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 250px;
+}
+
+.founder:hover {
+    transform: translateY(-10px);
+}
+
+.founder img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.founder h3 {
+    color: #3e2723;
+    margin-bottom: 10px;
+}
+
+/* Галерея */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6d4c41;
+    color: #ffccbc;
+}
