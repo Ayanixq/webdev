@@ -29,6 +29,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
+    margin-left: 985;
 }
 
 nav ul li {
